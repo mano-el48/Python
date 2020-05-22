@@ -1,6 +1,6 @@
 nome = "Manoel Vitor"
 lista = [1, 3, 5, 7, 9]
-range = range(0, 10)
+conjunto = range(0, 10)
 
 print(" for letra in nome: ")
 for letra in nome:
@@ -17,8 +17,8 @@ print("--------------------------")
 """'
 range(valor_incial, valor_anterior_ao_valor_final
 """
-print(" for numero in rang: ")
-for numero in range:
+print(" for numero in range: ")
+for numero in conjunto:
     print(numero)
 
 print("--------------------------")
