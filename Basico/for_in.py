@@ -1,6 +1,10 @@
 nome = "Manoel Vitor"
 lista = [1, 3, 5, 7, 9]
-conjunto = range(0, 10)
+
+"""
+range (start=0, stop, stpe=1)
+"""
+conjunto = range(10)
 
 print(" for letra in nome: ")
 for letra in nome:
