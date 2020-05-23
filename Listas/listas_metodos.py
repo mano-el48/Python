@@ -10,7 +10,7 @@ lista1.pop()#remover elemento no final
 print(lista1)
 
 lista2 = [7, 8, 9]
-lista1 += lista2 #concatenando
+lista1 += lista2 #concatenando as listas
 print(lista1)
 
 print(max(lista1))
