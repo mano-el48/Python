@@ -1,4 +1,7 @@
 
+lista = []
+print(type(lista))
+
 #  index: 0  1  2  3  4  5
 lista1 = [0, 1, 2, 3, 4, 5]
 # index: -6 -5 -4 -3 -2 -1
