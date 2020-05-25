@@ -3,8 +3,7 @@ secreto = 'perfume'
 digitadas = []
 chances = 3
 
-# Loop infinito
-while True:
+while True: # Loop infinito
     if chances <= 0:
         print('Você perdeu!!!')
         break
@@ -13,7 +12,7 @@ while True:
 
     if len(letra) > 1:
         print('Ahhh isso não vale, digite apenas uma letra.')
-        continue
+        continue #volta para o if acima
 
     digitadas.append(letra)
 
@@ -24,7 +23,7 @@ while True:
         digitadas.pop()
 
     secreto_temporario = ''
-    for letra_secreta in secreto:
+    for letra_secreta in secreto: 
         if letra_secreta in digitadas:
             secreto_temporario += letra_secreta
         else:
