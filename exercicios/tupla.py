@@ -8,7 +8,7 @@ print(type(tupla2))
 tupla = ('vemelho', 'azul', 'azul', 'verde', 'preto')
 print(tupla[0])
 print(tupla[-1])
-print(tupla[:-1])
+print(tupla[0:])#do primeiro elemento até o ultimo
 
 print(tupla.index('preto'))
 print(tupla.count('azul'))
