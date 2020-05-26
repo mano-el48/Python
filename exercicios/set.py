@@ -1,23 +1,30 @@
-# %%
-a = {1, 2, 3}
-type(a)
-# a[0]
-a = set('coddddd3r')
-print(a)
-print('3' in a, 4 not in a)
-{1, 2, 3} == {3, 2, 1, 3}
+s = set()
+print(type(s))
+s = {1}
+print(type(s))
 
 # operacoes
-c1 = {1, 2}
-c2 = {2, 3}
-c1.union(c2)
-c1.intersection(c2)
-c1.update(c2)
-c1
-c2 <= c1
-c1 >= c2
+a = {1, 2, 3, 4}
+b = {3, 4, 5, 6}
+print (a.union(b))
+print(a.intersection(b))
+print(a.difference(b))
+print(b.difference(a))
 
-{1, 2, 3} - {2}
-c1 - c2
-c1 -= {2}
-c1
+# pertinencia
+print(1 in a) #True
+print(5 in a) #False
+print(1 not in b) #True
+print(5 not in b) #False
+
+c = {1, 2} 
+# subconjuto
+print(c.issubset(a))
+print(c.issubset(b))
+
+# a é um "superset" de c
+print(a.issuperset(c))#c esta contido em a
+
+# removendo elementos duplicados de uma lista
+lista = [1, 2, 2, 3, 4, 5, 5]
+print(set(lista))
