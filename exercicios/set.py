@@ -22,7 +22,7 @@ c = {1, 2}
 print(c.issubset(a))
 print(c.issubset(b))
 
-# a é um "superset" de c
+# a é "superset" de c
 print(a.issuperset(c))#c esta contido em a
 
 # removendo elementos duplicados de uma lista
