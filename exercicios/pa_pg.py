@@ -20,9 +20,6 @@ def pg(a1, q, n):
     return 'Soma pg = ' + str(somaPg)
 
 
-
-
-
 print(pa(1, 2, 5))
 
 print('-' * 20)
