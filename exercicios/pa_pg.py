@@ -7,7 +7,7 @@ def pa(a1, r, n):
         print(f'a{index + 1} = {an}')
         somaPa += an
         
-    return 'Soma pa = ' + str(somaPa)
+    return f'Soma pa = {somaPa}'
 
 def pg(a1, q, n):
     somaPg = 0
