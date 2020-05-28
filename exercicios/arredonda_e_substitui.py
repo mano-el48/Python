@@ -1,6 +1,6 @@
 
 
-arredondarESubstir = lambda numero: f'R${str(round(numero, 2)).replace(".",",")}'
+arredondarESubstir = lambda numero: 'R$' + str(format(numero, '.2f')).replace(".",",")
 
 numero = float(input('Dgigite o valor para ser convertido: '))
 print(arredondarESubstir(numero))
