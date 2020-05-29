@@ -19,9 +19,17 @@ def pg(a1, q, n):
         
     return 'Soma pg = ' + str(somaPg)
 
+#1, 2 e 5
+a1 = int (input ('Digite o primeiro termo da Pa: '))
+r = int (input ('Digite a razão: '))
+n = int (input ('Digite o numero de termos da Pa: '))
 
-print(pa(1, 2, 5))
+a1 = int (input ('Digite o primeiro termo da Pg: '))
+q = int (input ('Digite a razão: '))
+n = int (input ('Digite o numero de termos da Pg: '))
+
+print(pa(a1, r, n))
 
 print('-' * 20)
 
-print(pg(1, 2, 5))
+print(pg(a1, q, n))
