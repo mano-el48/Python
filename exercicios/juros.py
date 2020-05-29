@@ -1,23 +1,23 @@
 
-def montanteJurosSimples(capitalInicial, taxaDEJuros, tempoDeAplicacao): 
+def montanteJurosSimples(capitalInicial, taxaDeJuros, tempoDeAplicacao): 
     return format(
-        (capitalInicial + (capitalInicial * (taxaDEJuros/100)* tempoDeAplicacao)),
+        (capitalInicial + (capitalInicial * (taxaDeJuros/100)* tempoDeAplicacao)),
         '.2f')
 
 
-def montanteJurosCompostos(capitalInicial, taxaDEJuros, tempoDeAplicacao): 
+def montanteJurosCompostos(capitalInicial, taxaDeJuros, tempoDeAplicacao): 
     return format(
-        (capitalInicial * ((1 + (taxaDEJuros/100))** tempoDeAplicacao)),
+        (capitalInicial * ((1 + (taxaDeJuros/100))** tempoDeAplicacao)),
         '.2f')
 
 #100, 10 e 2
 capitalInicial = float (input ('Digite o valor do Capital Inicial: '))
-taxaDEJuros = float (input ('Digite o valor da taxa de juros: '))
-tempoDeAplicacao = float (input ('Digite a quantidade de tempo de aplicação: '))
-print('Digite o regime de juros: ')
-regime = input('1 para Juros Simples e 2 para Juros Compostos ')
+taxaDeJuros = float (input ('Digite o valor da Taxa de Juros: '))
+tempoDeAplicacao = float (input ('Digite a quantidade de Tempo de Aplicação: '))
+print('Escolha o regime de juros: ')
+regime = input('1 para Juros Simples e 2 para Juros Compostos: ')
 
-if regime == 1:
-    print(montanteJurosSimples("Montante Juros Simples = R$" +capitalInicial, taxaDEJuros, tempoDeAplicacao))
+if regime == '1':
+    print('R$' + montanteJurosSimples(capitalInicial, taxaDeJuros, tempoDeAplicacao))
 else:
-    print(montanteJurosCompostos("Montante Juros Compostos = R$" +capitalInicial, taxaDEJuros, tempoDeAplicacao))
+    print('R$' + montanteJurosCompostos(capitalInicial, taxaDeJuros, tempoDeAplicacao))
