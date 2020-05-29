@@ -1,6 +1,6 @@
 
 def potencia(numero, expoente):
-    if numero == 1 or expoente == 0:
+    if expoente == 0:
         return 1
     elif expoente == 1:
         return numero
