@@ -2,8 +2,10 @@
 def potencia(numero, expoente):
     if expoente == 0:
         return 1
+
     elif expoente == 1:
         return numero
+    
     else:
         return numero * potencia(numero, expoente-1)
 
