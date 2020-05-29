@@ -1,14 +1,12 @@
 
-def mdc(primeiroNumero, segundoNumero):
-    # not segundoNumero -> segundoNumero == 0 pois 0 = False
-    return primeiroNumero if not segundoNumero else mdc(segundoNumero, primeiroNumero % segundoNumero)
+mdc = lambda numero1, numero2: numero1 if not numero2 else mdc(numero2, numero1 % numero2)
 
-primeiroNumero = int(input('Digite o pimeiro numero: '))
-segundoNumero = int(input('Digite o segundo numero: '))
-print(mdc(primeiroNumero, segundoNumero))
+numero1 = int(input('Digite o pimeiro numero: '))
+numero2 = int(input('Digite o segundo numero: '))
+print(mdc(numero1, numero2))
 
-# def mdc(primeiroNumero, segundoNumero):
-#     if segundoNumero == 0:
-#         return primeiroNumero
+# def mdc(numero1, numero2):
+#     if numero2 == 0:
+#         return numero1
         
-#     return mdc(segundoNumero, primeiroNumero % segundoNumero)
+#     return mdc(numero2, numero1 % numero2)
