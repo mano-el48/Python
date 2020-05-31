@@ -3,7 +3,6 @@ print(type(s))
 s = {1}
 print(type(s))
 
-#adicioando e removendo elementos
 s = set()
 s.add(1)# adiocionado
 print(s)
@@ -18,6 +17,8 @@ print(s)
 s.add('str')
 print(s)
 s.add((4, 5, 6))# adicoando uma tupla
+print(s)
+s.update([1, 2, 3, 4, 5], {5, 6, 7})#update
 print(s)
 
 # operacoes
