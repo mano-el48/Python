@@ -1,7 +1,13 @@
-def fibo(n):
-  if n <= 1:
-    return n
-  else:
-    return fibo(n-1) + fibo(n-2)
+def fib(n):
+    if (n == 0): 
+        return 0
 
-print(fibo(2))
+    elif (n == 1):
+        return 1
+    
+    return fib(n - 1) + fib(n - 2)
+
+n = int(input("Informe o tamanho da sequencia: "))
+print(fib(n))
+# for i in range(n):
+#   print(fib(i + 1))
