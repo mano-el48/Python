@@ -1,2 +1,2 @@
 #!python3
-import tupla
+import dicionario
