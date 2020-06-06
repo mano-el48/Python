@@ -1,2 +1,3 @@
 
-import pacote.sub.arquivo
+# import pacote.sub.arquivo
+from tipos import variaveis
