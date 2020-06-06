@@ -1,3 +1,2 @@
 #!python3
-
-import python.set
+import tupla
