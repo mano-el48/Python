@@ -1,2 +1,2 @@
-#!python3
-import dicionario
+
+import pacote.sub.arquivo
