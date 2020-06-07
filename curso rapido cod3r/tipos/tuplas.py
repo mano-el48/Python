@@ -1,4 +1,8 @@
+'''
+Uma tupla é uma lista imutável que restringe 
+a adição, alteração e remoção de elementos
 
+'''
 tupla1 = tuple()
 print(type(tupla1))
 tupla2 = ()

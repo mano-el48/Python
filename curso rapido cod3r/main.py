@@ -5,5 +5,8 @@
 #import tipos.lista
 # import tipos.tuplas
 # import tipos.set
-import tipos.dicionario
+# import operadores.aritmeticos_atribuicao
+# import operadores.unarios_ternarios
+# import operadores.logicos
+# import operadores.mebro_identidade
 
