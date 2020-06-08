@@ -1,7 +1,6 @@
 
 class Carro:
     def __init__(self):
-        
         self.__velocidade = 0
 
     @property
