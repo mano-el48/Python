@@ -3,22 +3,22 @@ class Produto:
     def __init__(self,
                  nome,
                  preco=1.99,
-                 desconto=0):
-
+                 desconto=0): #construtor
+        # self =  this 
         self.nome = nome
         self.__preco = preco #privado
         self.desconto = desconto
 
-    @property
+    @property #get
     def preco(self):
         return self.__preco
 
-    @preco.setter
+    @preco.setter #set
     def preco(self, novo_preco):
         if novo_preco > 0:
             self.__preco = novo_preco
 
-    # @property
+    # @property #converte o metodo para atribtuto
     def preco_final(self):
         return self.__preco * (1-self.desconto)
 
