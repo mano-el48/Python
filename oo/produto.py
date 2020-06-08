@@ -11,7 +11,7 @@ class Produto:
 
     @property
     def preco(self):
-        return f'R${self.__preco}'
+        return self.__preco
 
     @preco.setter
     def preco(self, novo_preco):
