@@ -8,4 +8,14 @@ class Nivel_Do_Funcionario(Enum):
 nivel = 'MID_LEVEL'
 print(Nivel_Do_Funcionario[nivel].value)
 
+# com dicionario
+Nivel_Do_Funcionario = {
+    'JUNIOR': 'JUNIOR',
+    'MID_LEVEL': 'MID_LEVEL',
+    'SENIOR' : 'SENIOR'
+}
+
+nivel = 'MID_LEVEL'
+print(Nivel_Do_Funcionario[nivel])
+
 
