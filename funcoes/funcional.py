@@ -1,7 +1,6 @@
-somar  = lambda a, b: a + b
-soma = somar
+sum = lambda a, b: a + b
 
-def operacao_aritmetica( funcao, operacao1, operacao2):
-    return funcao(operacao1, operacao2)
+def exec( fn, n1, n2 ):
+    return fn(n1, n2)
 
-resultado = operacao_aritmetica
+result = exec

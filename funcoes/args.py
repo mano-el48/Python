@@ -1,12 +1,11 @@
-
-def soma(*nuns):
+def sum(*numbers):
     total = 0
-    for n in nuns:
+    for n in numbers:
         total += n
 
     return total
 
 
-def resultado_final(**kwargs):
+def result(**kwargs):
     status = 'aprovadx' if kwargs['nota'] >= 6 else 'reprovadx'
     return f'{kwargs["nome"]} foi {status}'
