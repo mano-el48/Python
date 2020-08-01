@@ -8,3 +8,7 @@ class Node:
 # print(no1.data)
 # print(no2.data)
 # print(no2.next)
+
+# no1.next = no2
+# # print(no1.next)
+# print(no1.next.data)
