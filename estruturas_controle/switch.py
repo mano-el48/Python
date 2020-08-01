@@ -1,5 +1,5 @@
-def get_dia_semana(dia):
-    dias = {
+def get_day(day):
+    days = {
         1: 'Domingo',
         2: 'Segunda',
         3: 'Terça',
@@ -8,7 +8,7 @@ def get_dia_semana(dia):
         6: 'Sexta',
         7: 'Sábado',
     }
-    return dias.get(dia, '** Inválido **')
+    return days.get(day, '** Inválido **')
 
-for dia in range(1, 9):
-    print(f'{dia}: {get_dia_semana(dia)}')
+for day in range(1, 9):
+    print(f'{day}: {get_day(day)}')

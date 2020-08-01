@@ -1,12 +1,12 @@
 total = 0
-qtde = 0
-valor = 0
+quantity = 0
+value = 0
 
-while valor != -1:
-     valor = float(input('Digite -1 para encerrar: '))
-     if valor != -1:
-         qtde += 1
-         total += valor
+while value != -1:
+     value = float(input('Digite -1 para encerrar: '))
+     if value != -1:
+         quantity += 1
+         total += value
 
-print(f'Media dos valores digitados = {total / qtde}')
+print(f'Media dos valores digitados = {total / quantity}')
 

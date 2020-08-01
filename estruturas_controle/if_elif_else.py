@@ -1,32 +1,34 @@
 
-def nota_conceito(valor):
-    nota = float(valor)
+def validate_grade(value):
+    grade = float(value)
 
-    if nota > 10:
+    if grade > 10:
         return 'Nota inválida'
-    elif nota >= 9.1:
+    elif grade >= 9.1:
         return 'A'
-    elif nota >= 8.1:
+    elif grade >= 8.1:
         return 'A-'
-    elif nota >= 7.1:
+    elif grade >= 7.1:
         return 'B'
-    elif nota >= 6.1:
+    elif grade >= 6.1:
         return 'B-'
-    elif nota >= 5.1:
+    elif grade >= 5.1:
         return 'C'
-    elif nota >= 4.1:
+    elif grade >= 4.1:
         return 'C-'
-    elif nota >= 3.1:
+    elif grade >= 3.1:
         return 'D'
-    elif nota >= 2.1:
+    elif grade >= 2.1:
         return 'D-'
-    elif nota >= 1.1:
+    elif grade >= 1.1:
         return 'E'
-    elif nota >= 0:
+    elif grade >= 0:
         return 'E-'
     else:
         return 'Nota inválida'
 
-valor_informado = input('Nota do aluno: ')
-conceito = nota_conceito(valor_informado)
-print(conceito)
+
+while True:
+    grade = input('Nota do aluno: ')
+    result = validate_grade(grade)
+    print(result)
