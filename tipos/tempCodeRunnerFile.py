@@ -1,1 +1,0 @@
-t(Color.RED)
