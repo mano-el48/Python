@@ -21,8 +21,8 @@ Digito 1 = 0          #   Digito 2 = 9
 while True:
     # cpf = '16899535009'
     cpf = input('Digite um CPF: ')
-    novo_cpf = cpf[:-2]  # Elimina os dois últimos digitos do CPF
-    reverso = 10  # Contador reverso
+    new_cpf = cpf[:-2]  # Elimina os dois últimos digitos do CPF
+    revers = 10  # Contador reverso
     total = 0
 
     # Loop do CPF
@@ -30,24 +30,24 @@ while True:
         if index > 8:   # Primeiro índice vai de 0 a 9,
             index -= 9  # São os 9 primeiros digitos do CPF
 
-        total += int(novo_cpf[index]) * reverso # Valor total da multiplicação
+        total += int(new_cpf[index]) * revers  # Valor total da multiplicação
 
-        reverso -= 1  # Decrementa o contador reverso
-        if reverso < 2:
-            reverso = 11
-            digito = 11 - (total % 11)
+        revers -= 1  # Decrementa o contador reverso
+        if revers < 2:
+            revers = 11
+            digit = 11 - (total % 11)
 
-            if digito > 9:  
-                digito = 0
+            if digit > 9:
+                digit = 0
             total = 0
-            novo_cpf += str(digito)  # Concatena o digito gerado no novo cpf
+            new_cpf += str(digit)  # Concatena o digito gerado no novo cpf
 
     # Evita sequencias. Ex.: 11111111111, 00000000000...
-    sequencia = novo_cpf == str(novo_cpf[0]) * len(cpf)
+    sequency = new_cpf == str(new_cpf[0]) * len(cpf)
 
     # Descobri que sequências avaliavam como verdadeiro, então também
     # adicionei essa checagem aqui
-    if cpf == novo_cpf and not sequencia:
+    if cpf == new_cpf and not sequency:
         print('Válido')
     else:
         print('Inválido')

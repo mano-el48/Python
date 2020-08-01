@@ -1,19 +1,18 @@
 from functools import reduce
 
 #8.7, 6.8, 7.7, 7.7, 9.2, 5.3, 8.0
-notas = []
+grades = []
 n = int(input('Digite a quantidade de notas: '))
 
 print('Digite as Notas: ')
-for nota in range(n):
-    notas.append ( float(input()) )
+for grade in range(n):
+    grades.append ( float(input()) )
 
-def calcularMediaTurma(notas) :
+def calculate_average(grades) :
     total = 0
     for index in range(n):
-        total += notas[index]
-    return total/len(notas)
+        total += grades[index]
+    return total / len(grades)
 
-media = calcularMediaTurma(notas)
-
-print(f'Media da Turma = {media:.2f}')
+average = calculate_average(grades)
+print(f'Media da Turma = {average:.2f}')
