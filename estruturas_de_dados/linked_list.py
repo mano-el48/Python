@@ -22,21 +22,6 @@ class LinkeList:
     def __len__(self):
         return self._length
 
-    def get(self, index):
-        pointer = self.head
-        for i in range(index):
-            if pointer:
-                pointer = pointer.next
-            else:
-                raise IndexError('list index out of range')
-        if pointer:
-            return pointer.data
-        else:
-            raise IndexError('list index out of range')
-
-    def set(self, index, el):
-        pass
-
     def __getitem__(self, index):
         pointer = self.head
         for i in range(index):
@@ -75,4 +60,4 @@ print(list[1]) # 80
 # print(list[2]) # IndexError('list index out of range')
 
 list[1] = 56
-print(list[1])
+print(list[1]) # 56
