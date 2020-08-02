@@ -46,7 +46,7 @@ class LinkeList:
         else:
             raise IndexError('list index out of range')
 
-    def indexOf(self, el):
+    def index(self, el):
         pointer = self.head
         i = 0
         while(pointer):
@@ -73,6 +73,6 @@ print(list[1])  # 80
 list[1] = 56
 print(list[1])  # 56
 
-print(list.indexOf(7))
-# print(list.indexOf(80))  # ValueError: 80 is not in the list
-print(list.indexOf(56))
+print(list.index(7)) # 0
+# print(list.index(80))  # ValueError: 80 is not in the list
+print(list.index(56)) # 1
