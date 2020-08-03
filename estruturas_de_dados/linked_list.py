@@ -3,24 +3,24 @@ from modules.node import Node
 
 class LinkedList:
     def __init__(self):
-        self._head = None
+        self.head = None
         self._length = 0
 
     def append(self, el):
-        if self._head:
+        if self.head:
             # inerção quando a lista ja possui elementos
-            pointer = self._head
+            pointer = self.head
             while(pointer.next):
                 pointer = pointer.next
             pointer.next = Node(el)
 
         else:
             # primeira inserção
-            self._head = Node(el)
+            self.head = Node(el)
         self._length += 1
 
     def _getNode(self, index):
-        pointer = self._head
+        pointer = self.head
         for i in range(index):
             if pointer:
                 pointer = pointer.next
@@ -44,7 +44,7 @@ class LinkedList:
             raise IndexError('list index out of range')
 
     def index(self, el):
-        pointer = self._head
+        pointer = self.head
         i = 0
         while(pointer):
             if pointer.data == el:
@@ -57,17 +57,24 @@ class LinkedList:
     def insert(self, index, el):
         node = Node(el)
         if index == 0:
-            node.next = self._head
-            self._head = node
+            node.next = self.head
+            self.head = node
         else:
             pointer = self._getNode(index - 1)
             node.next = pointer.next
             pointer.next = node
         self._length += 1
+    
+    def remove(self):
+        pass
 
     def clear(self):
-        self._head = None
+        self.head = None
         self._length = 0
+    
+    def toString(self):
+        pass
+
 
 
 list = LinkedList()
@@ -101,4 +108,4 @@ list.append(17)
 list.insert(0, 22)
 print(list[0])  # 22 -> head
 print(list[len(list) - 1]) # 17
-print(list[10]) # IndexError: list index out of range
+# print(list[10]) # IndexError: list index out of range
