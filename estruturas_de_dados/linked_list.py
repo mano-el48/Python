@@ -33,6 +33,8 @@ class LinkedList:
         pointer = self._getNode(index)
         if pointer:
             return pointer.data
+        
+
         else:
             raise IndexError('list index out of range')
 
@@ -59,22 +61,41 @@ class LinkedList:
         if index == 0:
             node.next = self.head
             self.head = node
+
         else:
             pointer = self._getNode(index - 1)
             node.next = pointer.next
             pointer.next = node
         self._length += 1
-    
-    def remove(self):
-        pass
+
+    def remove(self, el):
+        if self.head == None:
+            raise ValueError('{} is not in the list'.format(el))
+        
+        elif self.head.data == el:
+            self.head = self.head.next
+            self._length -= 1
+            return True
+        
+        else:
+            ancestor = self.head
+            pointer = self.head.next
+            while(pointer):
+                if pointer.data == el:
+                    ancestor.next = pointer.next
+                    pointer.next = None
+                ancestor = pointer
+                pointer = pointer.next
+            self._length -= 1
+            return True
+        raise ValueError('{} is not in the list'.format(el))
 
     def clear(self):
         self.head = None
         self._length = 0
-    
+
     def toString(self):
         pass
-
 
 
 list = LinkedList()
@@ -107,5 +128,13 @@ list.append(17)
 
 list.insert(0, 22)
 print(list[0])  # 22 -> head
-print(list[len(list) - 1]) # 17
+print(list[len(list) - 1])  # 17
 # print(list[10]) # IndexError: list index out of range
+
+list.remove(17)
+print(list[len(list)-1]) # 32
+list.remove(32)
+print(list[len(list)-1]) # 56
+
+# list.remove(list[0])
+# print(list[0]) # 56
