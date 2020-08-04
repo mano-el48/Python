@@ -5,6 +5,9 @@ class LinkedList:
         self.head = None
         self._length = 0
 
+    def __len__(self):
+        return self._length
+
     def append(self, el):
         if self.head:
             # inerção quando a lista ja possui elementos
@@ -25,15 +28,10 @@ class LinkedList:
                 pointer = pointer.next
         return pointer
 
-    def __len__(self):
-        return self._length
-
     def __getitem__(self, index):
         pointer = self._getNode(index)
         if pointer:
             return pointer.data
-        
-
         else:
             raise IndexError('list index out of range')
 
@@ -70,12 +68,12 @@ class LinkedList:
     def remove(self, el):
         if self.head == None:
             raise ValueError('{} is not in the list'.format(el))
-        
+
         elif self.head.data == el:
             self.head = self.head.next
             self._length -= 1
             return True
-        
+
         else:
             ancestor = self.head
             pointer = self.head.next
@@ -92,23 +90,33 @@ class LinkedList:
         self.head = None
         self._length = 0
 
-    def toString(self):
-        pass
-
+    def __repr__(self):
+       pointer = self.head
+       if pointer == None:
+           raise IndexError('The lis is empty')
+       r = ""
+       pointer = self.head
+       while(pointer):
+           r = r + str(pointer.data) + " -> "
+           pointer = pointer.next
+       return r
+    
+    def __str__(self):
+        return self.__repr__()
 
 list = LinkedList()
-print(len(list))  # 0
-
 list.append(7)
 print(len(list))  # 1
-print(list[0])  # 7
+# print(list)  # IndexError: The lis is empty
 
 list.append(80)
 print(len(list))  # 2
-print(list[1])  # 80
+print(list[0])  # 7
 
 list[1] = 56
+print(list[0])  # 7
 print(list[1])  # 56
+print(len(list))  # 2
 
 print(list.index(7))  # 0
 # print(list.index(80))  # ValueError: 80 is not in the list
@@ -123,16 +131,19 @@ list.append(80)
 list.append(56)
 list.append(32)
 list.append(17)
+print(list) # 7 -> 80 -> 56 -> 32 -> 17 ->
 
 list.insert(0, 22)
-print(list[0])  # 22 -> head
+print(list[0])  # 22
 print(list[len(list) - 1])  # 17
 # print(list[10]) # IndexError: list index out of range
 
+print(list) # 22 -> 7 -> 80 -> 56 -> 32 -> 17 ->
 list.remove(22)
 list.remove(7)
+print(list)  # 80 -> 56 -> 32 -> 17 ->
 list.remove(80)
 list.remove(56)
 list.remove(32)
 list.remove(17)
-print(list[0]) # IndexError: list index out of range
+# print(list) # IndexError: The lis is empty
