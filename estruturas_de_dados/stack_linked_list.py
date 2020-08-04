@@ -1,1 +1,1 @@
-from node import Node
+from modules.node import Node
