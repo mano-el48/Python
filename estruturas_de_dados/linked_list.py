@@ -1,6 +1,5 @@
 from modules.node import Node
 
-
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -88,7 +87,6 @@ class LinkedList:
                 pointer = pointer.next
             self._length -= 1
             return True
-        raise ValueError('{} is not in the list'.format(el))
 
     def clear(self):
         self.head = None
@@ -131,10 +129,10 @@ print(list[0])  # 22 -> head
 print(list[len(list) - 1])  # 17
 # print(list[10]) # IndexError: list index out of range
 
-list.remove(17)
-print(list[len(list)-1]) # 32
+list.remove(22)
+list.remove(7)
+list.remove(80)
+list.remove(56)
 list.remove(32)
-print(list[len(list)-1]) # 56
-
-# list.remove(list[0])
-# print(list[0]) # 56
+list.remove(17)
+print(list[0]) # IndexError: list index out of range
