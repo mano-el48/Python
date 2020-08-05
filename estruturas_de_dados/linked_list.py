@@ -93,7 +93,7 @@ class LinkedList:
     def __repr__(self):
        pointer = self.head
        if pointer == None:
-           raise IndexError('The lis is empty')
+           raise IndexError('the list is empty')
        r = ""
        pointer = self.head
        while(pointer):
@@ -107,7 +107,7 @@ class LinkedList:
 list = LinkedList()
 list.append(7)
 print(len(list))  # 1
-# print(list)  # IndexError: The lis is empty
+# print(list)  # IndexError: the lis is empty
 
 list.append(80)
 print(len(list))  # 2
@@ -146,4 +146,4 @@ list.remove(80)
 list.remove(56)
 list.remove(32)
 list.remove(17)
-# print(list) # IndexError: The lis is empty
+# print(list) # IndexError: the list is empty
