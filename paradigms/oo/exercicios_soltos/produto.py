@@ -31,3 +31,4 @@ p2.preco = 17.99
 
 print(p1.nome, p1.preco, p1.desconto, p1.preco_final())
 print(p2.nome, p2.preco, p2.desconto, p2.preco_final())
+contolr_structures
