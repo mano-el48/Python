@@ -11,3 +11,6 @@ print(date)
 print(date.day)
 print(date.month)
 print(date.year)
+
+date = date.strftime('%d/%m/%Y')  # passando para string
+print(date)
