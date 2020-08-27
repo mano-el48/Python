@@ -1,17 +1,11 @@
 from datetime import datetime
 
 
-def parse_date(date: str):
-    day = int(date.split('/')[0])
-    month = int(date.split('/')[1])
-    year = int(date.split('/')[2])
+date = datetime(1998, 10, 9)
+date = date.strftime('%d/%m/%Y')  # passando para string
+print(date)
 
-    # return  date.strftime('%d/%m/%Y') #passando para string
-    return datetime(year, month, day)
-
-
-date = "09/10/1998"
-date = parse_date(date)
+date = datetime.strptime('09/10/1998', '%d/%m/%Y')
 print(date)
 print(date.day)
 print(date.month)
