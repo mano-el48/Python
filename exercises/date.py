@@ -8,6 +8,7 @@ print(date)
 date_str = '09/10/1998'
 date = datetime.strptime(date_str, '%d/%m/%Y')
 print(date)
+day = date.day
 print(date.day)
 print(date.month)
 print(date.year)

@@ -32,7 +32,7 @@ class Contract:
         self.__hours = hours
 
     def total_value(self):
-        return self.__value_per_hour * self.__hours
+        return int(self.__value_per_hour) * int(self.__hours)
 
 
 # c1 = Contract("09/10/1998", 15, 5)

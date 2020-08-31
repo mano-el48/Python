@@ -43,11 +43,20 @@ class Worker:
         self.__department = department
 
     @property
-    def contract(self):  # get
+    def contracts(self):  # get
         return self.__contracts
 
     def add_contract(self, contract):
         return self.__contracts.append(contract)
+
+    def calculate_income(self, month, year, n) -> float:
+        sum = self.__base_salary
+
+        for i in range(n):
+            if month == self.__contracts[i].date.month and year == self.__contracts[i].date.year:
+                sum += self.__contracts[i].total_value()
+
+        return sum
 
     def __repr__(self):
         worker_string = ""
