@@ -42,4 +42,6 @@ print(worker)
 print(
     f'\nRenda do funcionario em {month}/{year} = R${worker.calculate_income(month, year, n):.2f}')
 
-print(list(worker.contracts))
+print(len(worker.contracts))
+worker.remove_contract()
+print(len(worker.contracts))

@@ -47,7 +47,10 @@ class Worker:
         return self.__contracts
 
     def add_contract(self, contract):
-        return self.__contracts.append(contract)
+        self.__contracts.append(contract)
+
+    def remove_contract(self):
+        self.__contracts.pop()
 
     def calculate_income(self, month, year, n) -> float:
         sum = self.__base_salary
