@@ -31,14 +31,15 @@ for i in range(n):
     worker.add_contract(contract)
 
 month_and_year = input(
-    "Digite o mes e o ano para calcular a renda do funcionario (MM/yyyy): ")
+    "\nDigite o mes e o ano para calcular a renda do funcionario (MM/yyyy): ")
 
 month = int(month_and_year.split("/")[0])
 year = int(month_and_year.split("/")[1])
 
 print("\n") 
 print(worker)
-# print(worker.contracts)
 
 print(
-    f'Renda do funcionario em {month}/{year} = R${worker.calculate_income(month, year, n):.2f}')
+    f'\nRenda do funcionario em {month}/{year} = R${worker.calculate_income(month, year, n):.2f}')
+
+print(list(worker.contracts))
