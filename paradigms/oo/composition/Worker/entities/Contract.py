@@ -40,4 +40,4 @@ class Contract:
 # contracts = []
 # contracts.append(c1)
 # contracts.append(c2)
-# print(contracts)
+# print(list(contracts))
