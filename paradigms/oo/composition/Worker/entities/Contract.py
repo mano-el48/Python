@@ -36,7 +36,8 @@ class Contract:
 
 
 # c1 = Contract("09/10/1998", 15, 5)
-# print(c1.date, c1.value_per_hour, c1.hours, c1.total_value())
-
 # c2 = Contract("09/10/1998", 20, 5)
-# print(c2.date, c2.value_per_hour, c2.hours, c2.total_value())
+# contracts = []
+# contracts.append(c1)
+# contracts.append(c2)
+# print(contracts)
