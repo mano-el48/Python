@@ -35,9 +35,9 @@ class Contract:
         return int(self.__value_per_hour) * int(self.__hours)
 
 
-# c1 = Contract("09/10/1998", 15, 5)
-# c2 = Contract("09/10/1998", 20, 5)
-# contracts = []
-# contracts.append(c1)
-# contracts.append(c2)
-# print(list(contracts))
+c1 = Contract("09/10/1998", 15, 5)
+c2 = Contract("09/10/1998", 20, 5)
+contracts = []
+contracts.append(c1)
+contracts.append(c2)
+print(contracts)
