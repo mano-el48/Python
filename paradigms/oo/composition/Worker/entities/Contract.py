@@ -34,10 +34,21 @@ class Contract:
     def total_value(self):
         return int(self.__value_per_hour) * int(self.__hours)
 
+    def __repr__(self):
+        contract = ""
+        date = "\n" + f'Data: {self.__date}' + "\n"
+        value_per_hour = f'Valor Por Hora: R${self.__value_per_hour:.2f}' + "\n"
+        hours = f'Quantidade de horas trabalhadas: {self.__hours:.2f} h' + "\n"
+        contract = date + value_per_hour + hours
+        return contract
 
-c1 = Contract("09/10/1998", 15, 5)
-c2 = Contract("09/10/1998", 20, 5)
-contracts = []
-contracts.append(c1)
-contracts.append(c2)
-print(contracts)
+    def __str__(self):
+        return self.__repr__()
+
+
+# c1 = Contract("09/10/1998", 15, 5)
+# c2 = Contract("09/10/1998", 20, 5)
+# contracts = []
+# contracts.append(c1)
+# contracts.append(c2)
+# print(contracts)
