@@ -36,6 +36,7 @@ def calculate_average(n, eyes_color, hair_color, ages):
     else:
         return 0
 
+
 def determine_older_age(n, ages):
     older_age = ages[0]
 
