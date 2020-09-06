@@ -1,11 +1,7 @@
 import math
 
 
-def read_data(n,
-              sex,
-              eyes_color,
-              hair_color,
-              ages):
+def read_data(n, sex, eyes_color, hair_color, ages):
 
     for i in range(n):
         print("Digite o sexo M(Masculino) ou F(Feminino): ")
@@ -24,10 +20,7 @@ def read_data(n,
         print("\n")
 
 
-def calculate_average(n,
-                      eyes_color,
-                      hair_color,
-                      ages):
+def calculate_average(n, eyes_color, hair_color, ages):
     average = 0
     summation = 0
     peopleWithBrownEyesAndDarkHair = 0
@@ -37,15 +30,11 @@ def calculate_average(n,
             summation += ages[i]
             peopleWithBrownEyesAndDarkHair += 1
 
-        if peopleWithBrownEyesAndDarkHair > 0:
-            average = summation / peopleWithBrownEyesAndDarkHair
-            average = math.trunc(average)
-
-            return average
-
-        else:
-            return 0
-
+    if peopleWithBrownEyesAndDarkHair > 0:
+        average = summation / peopleWithBrownEyesAndDarkHair
+        return math.trunc(average)
+    else:
+        return 0
 
 def determine_older_age(n, ages):
     older_age = ages[0]
@@ -55,6 +44,17 @@ def determine_older_age(n, ages):
             olderAge = ages[i]
 
     return olderAge
+
+
+def calculate_quantity(n, sex, eyes_color, hair_color, ages):
+
+    blondWomenBetween18And35WithBlueEyes = 0
+
+    for i in range(n):
+        if sex[i] == 'F' and ages[i] >= 18 and ages[i] <= 35 and eyes_color[i] == 'A' and hair_color[i] == 'L':
+            blondWomenBetween18And35WithBlueEyes += 1
+
+    return blondWomenBetween18And35WithBlueEyes
 
 
 def create_matrix(n, ages, matrix):
@@ -73,5 +73,5 @@ def create_matrix(n, ages, matrix):
 
     for i in range(n):
         for j in range(n):
-            print(f'{matrix[i][j]} ', end='')
+            print(f'{matrix[i][j]}  ', end='')
         print()
