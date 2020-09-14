@@ -4,7 +4,7 @@ import math
 def read_data(n, sex, eyes_color, hair_color, ages):
 
     for i in range(n):
-        print("Digite o sexo M(Masculino) ou F(Feminino): ")
+        print("Digite o sexo M(Masculino), F(Feminino) ou O(Outro): ")
         sex.append(input())
 
         print("\nDigite a cor dos olhos A(Azuis) ou C(Castanhos): ")
