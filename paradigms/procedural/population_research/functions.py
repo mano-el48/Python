@@ -1,11 +1,11 @@
 import math
 
 
-def read_data(n, sex, eyes_color, hair_color, ages):
+def read_data(n, gender, eyes_color, hair_color, ages):
 
     for i in range(n):
-        print("Digite o sexo M(Masculino) ou F(Feminino): ")
-        sex.append(input())
+        print("Digite o genero M(Masculino), F(Feminino) ou Outro: ")
+        gender.append(input())
 
         print("\nDigite a cor dos olhos A(Azuis) ou C(Castanhos): ")
         eyes_color.append(input())
@@ -47,12 +47,12 @@ def determine_older_age(n, ages):
     return olderAge
 
 
-def calculate_quantity(n, sex, eyes_color, hair_color, ages):
+def calculate_quantity(n, gender, eyes_color, hair_color, ages):
 
     blondWomenBetween18And35WithBlueEyes = 0
 
     for i in range(n):
-        if sex[i] == 'F' and ages[i] >= 18 and ages[i] <= 35 and eyes_color[i] == 'A' and hair_color[i] == 'L':
+        if gender[i] == 'F' and ages[i] >= 18 and ages[i] <= 35 and eyes_color[i] == 'A' and hair_color[i] == 'L':
             blondWomenBetween18And35WithBlueEyes += 1
 
     return blondWomenBetween18And35WithBlueEyes
