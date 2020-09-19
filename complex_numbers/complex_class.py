@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-# Simulando uma Struct
+
 @dataclass
 class Complex:
     real: float
