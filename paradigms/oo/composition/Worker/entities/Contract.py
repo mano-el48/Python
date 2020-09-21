@@ -38,7 +38,7 @@ class Contract:
         contract = ""
         date = "\n" + f'Data: {self.__date}' + "\n"
         value_per_hour = f'Valor Por Hora: R${self.__value_per_hour:.2f}' + "\n"
-        hours = f'Quantidade de horas trabalhadas: {self.__hours:.2f} h' + "\n"
+        hours = f'Horas Trabalhadas: {self.__hours:.2f} h' + "\n"
         contract = date + value_per_hour + hours
         return contract
 
