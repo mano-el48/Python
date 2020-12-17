@@ -1,4 +1,4 @@
-from modules.node import Node
+from models.node import Node
 
 class LinkedList:
     def __init__(self):
