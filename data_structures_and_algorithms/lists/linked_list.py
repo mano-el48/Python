@@ -31,14 +31,14 @@ class LinkedList:
     def __getitem__(self, index):
         pointer = self._getNode(index)
         if pointer:
-            return pointer.data
+            return pointer.el
         else:
             raise IndexError('list index out of range')
 
     def __setitem__(self, index, el):
         pointer = self._getNode(index)
         if pointer:
-            pointer.data = el
+            pointer.el = el
         else:
             raise IndexError('list index out of range')
 
@@ -46,7 +46,7 @@ class LinkedList:
         pointer = self.head
         i = 0
         while(pointer):
-            if pointer.data == el:
+            if pointer.el == el:
                 return i
             pointer = pointer.next
             i += 1
@@ -69,7 +69,7 @@ class LinkedList:
         if self.head == None:
             raise ValueError('{} is not in the list'.format(el))
 
-        elif self.head.data == el:
+        elif self.head.el == el:
             self.head = self.head.next
             self._length -= 1
             return True
@@ -78,7 +78,7 @@ class LinkedList:
             ancestor = self.head
             pointer = self.head.next
             while(pointer):
-                if pointer.data == el:
+                if pointer.el == el:
                     ancestor.next = pointer.next
                     pointer.next = None
                 ancestor = pointer
@@ -97,7 +97,7 @@ class LinkedList:
        r = ""
        pointer = self.head
        while(pointer):
-           r = r + str(pointer.data) + " -> "
+           r = r + str(pointer.el) + " -> "
            pointer = pointer.next
        return r
     
