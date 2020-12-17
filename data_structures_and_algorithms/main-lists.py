@@ -1,4 +1,4 @@
-from lists.linked_list import LinkedList 
+from lists.linked_list import LinkedList
 
 list = LinkedList()
 list.append(7)
