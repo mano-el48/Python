@@ -123,7 +123,7 @@ while True:
             console.log('\nElemento nao encontrado!')
         }
 
-elif option == 1: {
+elif option == 10:
 
         el = questionInt("\nDigite o elemento: ")
         index = list.indexOf(el)
@@ -135,7 +135,7 @@ elif option == 1: {
             console.log('\nElemento nao encontrado!')
         }
 
-elif option == 1: {
+elif option == 11
 
         index = questionInt("\nDigite o indice do elemento a ser alterado: ")
         el = questionInt("Digite o novo elemento: ")
@@ -150,7 +150,7 @@ elif option == 1: {
             print('\nHouve um erro na alteracao!`)
         }
 
-elif option == 1: {
+elif option == 12:
 
         if (list.isEmpty()) {
             console.log('\nA lista esta vazia!');} else {
@@ -158,19 +158,17 @@ elif option == 1: {
 
         }
 
-elif option == 1: {
+elif option == 13: {
 
         list.clear()
 
-        if (list.isEmpty()) {
+        if (list.isEmpty() != None) {
             console.log('\nA lista esta vazia!')
         }
 
     } else {
         console.log("\nOpcao Invalida!")
     }
-
-} while (1)
 
 # list.append(7)
 # print(len(list))  # 1
