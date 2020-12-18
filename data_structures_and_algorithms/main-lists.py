@@ -18,11 +18,11 @@ while True:
     print('12 - Impirmir lista')
     print('13 - Limpar lista')
     option = input('Opcao:')
-    
+
     if option == 1:
         el = int(input('\nDigite o elemento a ser inserido: '))
         list.insert(el)
-        
+
         print(f'\n{list}')
 
     elif option == 2:
@@ -35,56 +35,48 @@ while True:
 
        el = int(input('\nDigite o elemento a ser inserido: '))
        list.sortedInsert(el)
-   
+
        print(f'\n{list}')
 
     elif option == 4:
 
        el = int(input('\nDigite o elemento a ser inserido: '))
        index = int(input('\nDigite o indice do novo elemento: '))
-       
-        if (list.insert(el, index) != = undefined) {
+
+       if list.insert(el, index) != None:
             print(f'\n{list}')
+       else:
+            print('\nFalha na insercao!')
 
-        } else {
-            console.log(`\nFalha na insercao!`)
+    elif option == 5:
 
-        }
-
-elif option == 5:
-
-        if (!list.isEmpty()) {
+        if list.isEmpty() != None:
             list.removeAt(0)
 
-            if (list.isEmpty()) {
-                console.log('\nA lista esta vazia!')
+            if list.isEmpty() != None:
+                print('\nA lista esta vazia!')
 
-            } else {
+            else:
                 print(f'\n{list}')
-            }
 
+        else:
+            print('\nA lista esta vazia!')
 
-        } else {
-            console.log('\nA lista esta vazia!')
-        }
+    elif option == 6:
 
-elif option == 6:
-
-        if (!list.isEmpty()) {
+        if list.isEmpty() != None:
             list.pop()
+            
+            if list.isEmpty() != None:
+                print('\nA lista esta vazia!')
 
-            if (list.isEmpty()) {
-                console.log('\nA lista esta vazia!')
-
-            } else {
+            else:
                 print(f'\n{list}')
-            }
 
-        } else {
-            console.log('\nA lista esta vazia!')
-        }
-
-elif option == 7:
+        else:
+            print('\nA lista esta vazia!')
+        
+    elif option == 7:
 
         if (!list.isEmpty()) {
             el = questionInt('\nDigite o elemento a ser removido: ')
@@ -109,23 +101,23 @@ elif option == 7:
 
         }
 
-elif option == 8:
+    elif option == 8:
 
         if (list.isEmpty()) {
             console.log('\nA lista esta vazia!')
 
         } else {
 
-            console.log(`\nQuantidade de elementos na lista: ${list.length}`)
+            print('\nQuantidade de elementos na lista: ${list.length}`)
         }
 
-elif option == 9:
-
+    elif option == 9:
+        
         index = questionInt("\nDigite o indice: ")
         el = list.getElementAt(index)
 
         if (el != = undefined) {
-            console.log(`\nElemento na posicao ${index}: ${el}`)
+            print('\nElemento na posicao ${index}: ${el}`)
 
         } else {
             console.log('\nElemento nao encontrado!')
@@ -137,7 +129,7 @@ elif option == 1: {
         index = list.indexOf(el)
 
         if (list.indexOf(el) != = -1) {
-            console.log(`\nElemento na posicao ${index}: ${el}`)
+            print('\nElemento na posicao ${index}: ${el}`)
 
         } else {
             console.log('\nElemento nao encontrado!')
@@ -151,11 +143,11 @@ elif option == 1: {
         list.setElementAt(el, index)
 
         if (list.getElementAt(index) == = el) {
-            console.log(`\nAlteracao realizada com sucesso!\n`)
+            print('\nAlteracao realizada com sucesso!\n`)
             console.log(list.toString())
 
         } else {
-            console.log(`\nHouve um erro na alteracao!`)
+            print('\nHouve um erro na alteracao!`)
         }
 
 elif option == 1: {
