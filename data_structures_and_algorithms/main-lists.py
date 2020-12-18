@@ -131,7 +131,7 @@ while True:
             print('\nHouve um erro na alteracao!`)
         }
 
-elif option == 11:
+    elif option == 11:
 
         if (len(list)) {
             print('\nA lista esta vazia!');} else {
@@ -139,7 +139,7 @@ elif option == 11:
 
         }
 
-elif option == 13: {
+    elif option == 13: {
 
         list.clear()
 
