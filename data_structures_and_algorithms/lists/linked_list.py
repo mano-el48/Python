@@ -25,6 +25,9 @@ class LinkedList:
         self._length += 1
 
 
+    def pop(self):
+        pass
+    
     def _getNode(self, index):
         pointer = self._head
         for i in range(index):
@@ -100,8 +103,8 @@ class LinkedList:
 
     def clear(self):
         self._head = None
-        self._tail = None
         self._length = 0
+        self._tail = None
 
 
     def __repr__(self):

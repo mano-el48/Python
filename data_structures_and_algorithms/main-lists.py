@@ -37,6 +37,8 @@ while True:
         el = int(input('\nDigite o elemento a ser inserido: '))
         index = int(input('\nDigite o indice do novo elemento: '))
 
+        list.insert(index, el)
+
         print(f'\n{list}\n')
 
     elif option == 4:
@@ -46,13 +48,13 @@ while True:
             list.remove(list[0])
 
             if len(list) == 0:
-                print('\nA lista esta vazia!')
+                print('\nA lista esta vazia!\n')
 
             else:
                 print(f'\n{list}\n')
 
         else:
-            print('\nA lista esta vazia!')
+            print('\nA lista esta vazia!\n')
 
     elif option == 5:
 
@@ -60,13 +62,13 @@ while True:
             list.pop()
 
             if len(list) == 0:
-                print('\nA lista esta vazia!')
+                print('\nA lista esta vazia!\n')
 
             else:
                 print(f'\n{list}\n')
 
         else:
-            print('\nA lista esta vazia!')
+            print('\nA lista esta vazia!\n')
 
     elif option == 6:
 
@@ -76,18 +78,18 @@ while True:
             list.remove(el)
 
             if len(list) == 0:
-                print('\nA lista esta vazia!')
+                print('\nA lista esta vazia!\n')
 
             else:
                 print(f'\n{list}\n')
 
         else:
-            print('\nA lista esta vazia!')
+            print('\nA lista esta vazia!\n')
 
     elif option == 7:
 
         if len(list) == 0:
-            print('\nA lista esta vazia!')
+            print('\nA lista esta vazia!\n')
 
         else:
             print(f'\nQuantidade de elementos na lista: {len(list)}')
@@ -101,19 +103,12 @@ while True:
 
     elif option == 9:
 
-        index = int(print("\nDigite o indice: "))
-        el = list[index]
-
-        print(f'\nElemento na posicao {index}: {el}')
-
-    elif option == 10:
-
         el = int(print("\nDigite o elemento: "))
         index = list.index(el)
 
         print(f'\nElemento na posicao {index}: {el}')
 
-    elif option == 11:
+    elif option == 10:
 
         index = int(print("\nDigite o indice do elemento a ser alterado: "))
         el = int(print("Digite o novo elemento: "))
@@ -127,12 +122,20 @@ while True:
         else:
             print('\nHouve um erro na alteracao!')
 
+    elif option == 11:
+
+        if len(list) == 0:
+            print('\nA lista esta vazia!\n')
+
+        else:
+            print(f'\n{list}\n')
+
     elif option == 12:
 
         list.clear()
 
         if len(list) == 0:
-            print('\nA lista esta vazia!')
+            print('\nA lista esta vazia!\n')
 
     else:
         print("\nOpcao Invalida!")
