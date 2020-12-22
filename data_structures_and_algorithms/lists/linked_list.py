@@ -2,31 +2,36 @@ from models.node import Node
 
 class LinkedList:
     def __init__(self):
-        self.head = None
+        self._head = None
+        self._tail = None
         self._length = 0
+
 
     def __len__(self):
         return self._length
 
+
     def append(self, el):
-        if self.head:
+        if self._head:
             # inerção quando a lista ja possui elementos
-            pointer = self.head
+            pointer = self._head
             while(pointer.next):
                 pointer = pointer.next
             pointer.next = Node(el)
 
         else:
             # primeira inserção
-            self.head = Node(el)
+            self._head = Node(el)
         self._length += 1
 
+
     def _getNode(self, index):
-        pointer = self.head
+        pointer = self._head
         for i in range(index):
             if pointer:
                 pointer = pointer.next
         return pointer
+
 
     def __getitem__(self, index):
         pointer = self._getNode(index)
@@ -35,6 +40,7 @@ class LinkedList:
         else:
             raise IndexError('list index out of range')
 
+
     def __setitem__(self, index, el):
         pointer = self._getNode(index)
         if pointer:
@@ -42,8 +48,10 @@ class LinkedList:
         else:
             raise IndexError('list index out of range')
 
+    
+
     def index(self, el):
-        pointer = self.head
+        pointer = self._head
         i = 0
         while(pointer):
             if pointer.el == el:
@@ -53,11 +61,12 @@ class LinkedList:
 
         raise ValueError('{} is not in the list'.format(el))
 
+    
     def insert(self, index, el):
         node = Node(el)
         if index == 0:
-            node.next = self.head
-            self.head = node
+            node.next = self._head
+            self._head = node
 
         else:
             pointer = self._getNode(index - 1)
@@ -66,18 +75,19 @@ class LinkedList:
         
         self._length += 1
 
+
     def remove(self, el):
-        if self.head == None:
+        if self._head == None:
             raise ValueError('{} is not in the list'.format(el))
 
-        elif self.head.el == el:
-            self.head = self.head.next
+        elif self._head.el == el:
+            self._head = self._head.next
             self._length -= 1
             return True
 
         else:
-            ancestor = self.head
-            pointer = self.head.next
+            ancestor = self._head
+            pointer = self._head.next
             while(pointer):
                 if pointer.el == el:
                     ancestor.next = pointer.next
@@ -87,20 +97,24 @@ class LinkedList:
             self._length -= 1
             return True
 
+
     def clear(self):
-        self.head = None
+        self._head = None
+        self._tail = None
         self._length = 0
 
+
     def __repr__(self):
-       pointer = self.head
+       pointer = self._head
        if pointer == None:
            raise IndexError('the list is empty')
        r = ""
-       pointer = self.head
+       pointer = self._head
        while(pointer):
            r = r + str(pointer.el) + " -> "
            pointer = pointer.next
        return r
+    
     
     def __str__(self):
         return self.__repr__()

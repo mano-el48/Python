@@ -28,21 +28,17 @@ while True:
 
     elif option == 2:
 
-       el = int(input('\nDigite o elemento a ser inserido: '))
-       list.append(el)
+        el = int(input('\nDigite o elemento a ser inserido: '))
+        list.append(el)
 
-       print(f'\n{list}')
+        print(f'\n{list}')
 
     elif option == 3:
 
-       el = int(input('\nDigite o elemento a ser inserido: '))
-       index = int(input('\nDigite o indice do novo elemento: '))
+        el = int(input('\nDigite o elemento a ser inserido: '))
+        index = int(input('\nDigite o indice do novo elemento: '))
 
-       if list.insert(el, index) > 0:
-            print(f'\n{list}')
-
-       else:
-            print('\nFalha na insercao!')
+        print(f'\n{list}')
 
     elif option == 4:
 
@@ -102,54 +98,45 @@ while True:
         index = int(print("\nDigite o indice: "))
         el = list[index]
 
-        # if el != None:
         print(f'\nElemento na posicao {index}: {el}')
 
-        # else:
-            # print('\nElemento nao encontrado!')
-
     elif option == 9:
+
+        index = int(print("\nDigite o indice: "))
+        el = list[index]
+
+        print(f'\nElemento na posicao {index}: {el}')
+
+    elif option == 10:
 
         el = int(print("\nDigite o elemento: "))
         index = list.index(el)
 
         print(f'\nElemento na posicao {index}: {el}')
 
-
-    elif option == 10:
-
-        index = int(print("\nDigite o indice do elemento a ser alterado: ")
-        el=int(print("Digite o novo elemento: ")
-
-        list.setElementAt(el, index)
-
-        if (list.getElementAt(index) == = el) {
-            print('\nAlteracao realizada com sucesso!\n`)
-            print(list.toString())
-
-        } else {
-            print('\nHouve um erro na alteracao!`)
-        }
-
     elif option == 11:
 
-        if (len(list)) {
-            print('\nA lista esta vazia!');} else {
-            print(f'\n{list}')
+        index = int(print("\nDigite o indice do elemento a ser alterado: "))
+        el = int(print("Digite o novo elemento: "))
 
-        }
+        list[index] = el
 
-    elif option == 13: {
+        if list[index] == el:
+            print('\nAlteracao realizada com sucesso!\n')
+            print(list)
+
+        else:
+            print('\nHouve um erro na alteracao!')
+
+    elif option == 13:
 
         list.clear()
 
-        if (len(list) > 0) {
+        if len(list) == 0:
             print('\nA lista esta vazia!')
-        }
 
-    } else {
+    else:
         print("\nOpcao Invalida!")
-    }
 
 # list.append(7)
 # print(len(list))  # 1
