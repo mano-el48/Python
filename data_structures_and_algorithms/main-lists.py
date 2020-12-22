@@ -6,39 +6,38 @@ while True:
     print('Menu de opcoes:')
     print('1  - Inserir elemento inicio')
     print('2  - Inserir elemento final')
-    print('3  - Inserir elemento (ordenado)')
-    print('4  - Inserir elemento (qualquer posicao)')
-    print('5  - Remover elemento inicio')
-    print('6  - Remover elemento final')
-    print('7  - Remover elemento (qualquer)')
-    print('8  - Obter quantidade de elementos na lista')
-    print('9  - Obter elemento pelo indice')
-    print('10 - Obter indice pelo elemento')
-    print('11 - Alterar elemento')
-    print('12 - Impirmir lista')
-    print('13 - Limpar lista')
-    option = input('Opcao:')
+    print('3  - Inserir elemento (qualquer posicao)')
+    print('4  - Remover elemento inicio')
+    print('5  - Remover elemento final')
+    print('6  - Remover elemento (qualquer)')
+    print('7  - Obter quantidade de elementos na lista')
+    print('8  - Obter elemento pelo indice')
+    print('9  - Obter indice pelo elemento')
+    print('10 - Alterar elemento')
+    print('11 - Impirmir lista')
+    print('12 - Limpar lista')
+    option = int(input('Opcao: '))
 
     if option == 1:
 
         el = int(input('\nDigite o elemento a ser inserido: '))
         list.insert(0, el)
 
-        print(f'\n{list}')
+        print(f'\n{list}\n')
 
     elif option == 2:
 
         el = int(input('\nDigite o elemento a ser inserido: '))
         list.append(el)
 
-        print(f'\n{list}')
+        print(f'\n{list}\n')
 
     elif option == 3:
 
         el = int(input('\nDigite o elemento a ser inserido: '))
         index = int(input('\nDigite o indice do novo elemento: '))
 
-        print(f'\n{list}')
+        print(f'\n{list}\n')
 
     elif option == 4:
 
@@ -50,7 +49,7 @@ while True:
                 print('\nA lista esta vazia!')
 
             else:
-                print(f'\n{list}')
+                print(f'\n{list}\n')
 
         else:
             print('\nA lista esta vazia!')
@@ -64,7 +63,7 @@ while True:
                 print('\nA lista esta vazia!')
 
             else:
-                print(f'\n{list}')
+                print(f'\n{list}\n')
 
         else:
             print('\nA lista esta vazia!')
@@ -80,7 +79,7 @@ while True:
                 print('\nA lista esta vazia!')
 
             else:
-                print(f'\n{list}')
+                print(f'\n{list}\n')
 
         else:
             print('\nA lista esta vazia!')
@@ -128,7 +127,7 @@ while True:
         else:
             print('\nHouve um erro na alteracao!')
 
-    elif option == 13:
+    elif option == 12:
 
         list.clear()
 
