@@ -111,12 +111,12 @@ class LinkedList:
        pointer = self._head
        if pointer == None:
            raise IndexError('the list is empty')
-       r = ""
+       string = ""
        pointer = self._head
        while(pointer):
-           r = r + str(pointer.el) + " -> "
+           string = string + str(pointer.el) + " -> "
            pointer = pointer.next
-       return r
+       return string
     
     
     def __str__(self):
